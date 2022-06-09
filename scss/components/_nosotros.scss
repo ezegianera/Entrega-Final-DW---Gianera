@@ -1,0 +1,107 @@
+/* Estilos para el main */
+
+.nmain {
+    display: grid;
+    grid-template-areas: "foto2 prese2 prese2 prese2";
+    column-gap: 2vw;
+    height: 82vh;
+    background-color: black;
+    border-bottom: $border-marca;
+
+    .nmain__izq {
+        grid-area: foto2;
+
+        img {
+            height: calc(82vh - 5px);
+        }
+    }
+
+    .nmain__derecha {
+        grid-area: prese2;
+        @include flex-column-center;
+
+        .nmain__subtitulo {
+            margin: 1.5vh 0;
+            color: white;
+            font-family: brewery;
+            font-size: 5.2vw;
+        }
+
+        .nmain__parrafo {
+            margin: 0 2.5vw;
+            color: white;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 1.56vw;
+            white-space:pre-line;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Query para tablets verticales */
+
+@media screen and (max-width:1024px) {
+
+    /* Estilos para pagina NOSOTROS /*
+    /* Estilos para el main */
+
+    .nmain {
+        grid-template-areas:    "foto2" 
+                                "prese2";
+        column-gap: 0;
+        justify-items: center;
+        align-items: center;
+        background-color: black;
+        border-bottom: $border-marca;
+        height: auto;
+
+        .nmain__izq{
+
+            img{
+                @include medidas-img(100vw,auto);
+            }
+        }
+
+        .nmain__derecha {
+    
+            .nmain__subtitulo {
+                margin: 0;
+                margin-top: 2vw;
+                font-size: 7vw;
+            }
+    
+            .nmain__parrafo {
+                margin: 0 5vw;
+                margin-bottom: 3vw;
+                font-size: 2.7vw;
+                line-height: 3.6vw;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Query para celulares y tablets pequeñas */
+
+@media screen and (max-width:650px) {
+
+    /* Estilos para pagina NOSOTROS /*
+    /* Estilos para el main */
+
+    .nmain {
+
+        .nmain__derecha {
+    
+            .nmain__subtitulo {
+                font-size: 9vw;
+            }
+    
+            .nmain__parrafo {
+                font-size: 4.5vw;
+                line-height: 5vw;
+            }
+        }
+    }
+}

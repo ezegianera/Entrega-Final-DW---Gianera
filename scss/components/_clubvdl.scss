@@ -1,0 +1,295 @@
+/* Estilos para el main */
+
+.clmain{
+    @include flex-column-center;
+    row-gap: 2.5vh;
+    background-color: black;
+    border-bottom: $border-marca;
+
+    .clmain__imagen{
+        @include medidas-img(100vw,auto);
+    }
+
+    .clmain__subtitulo{
+        color: white;
+        font-family: brewery;
+        font-size: 5.2vw;
+    }
+
+    // Membresia estandar
+
+    .clmain__estandar{
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        .clmain__estandar--imagen{
+            @include medidas-img(auto,48.75rem);
+            border-radius: 12%;
+        }
+
+        .clmain__estandar--texto{
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    // Membresia premium 
+
+    .clmain__premium{
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        justify-items: center;
+        align-items: center;
+
+        .clmain__premium--imagen{
+            order: 1;
+            @include medidas-img(auto,48.75rem);
+            border-radius: 12%;
+        }
+
+        .clmain__premium--texto{
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    // Tabla comparativa precios 
+
+    .clmain__tabla {
+        align-self: center;
+        text-align: center;
+        border: $border-doble;
+        border-collapse: collapse;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+
+        .clmain__tabla--head {
+            color: white;
+            font-family: brewery;
+            font-size: 2.1vw;
+            border: $border-doble;
+
+            tr{
+                th{
+                    padding: 0 25px;
+                    border: $border-tabla;
+                }
+            }
+        }
+
+        tr{
+            padding: 20px;
+            border: $border-tabla;
+
+            td{
+
+                padding: 20px;
+                border: $border-tabla;
+                color: white;
+                font-family: caredrock;
+                font-size: 1.5vw;
+
+                ul{
+
+                    li{
+                        list-style-type: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Query para tablets verticales */
+
+@media screen and (max-width:1024px) {
+
+    /* Estilos para pagina CLUB VALLE DE LERMA /*
+    /* Estilos para el main */  
+
+    .clmain{
+    
+        .clmain__subtitulo{
+            font-size: 7vw;
+        }
+    
+        // Membresia estandar
+    
+        .clmain__estandar{
+            margin-top: 5vh;
+            display: grid;
+            grid-template-rows: 0.5fr 2fr;
+            grid-template-columns: 1fr;
+    
+            .clmain__estandar--imagen{
+                @include medidas-img(auto,77vw);
+                order: 1;
+            }
+    
+            .clmain__estandar--texto{
+    
+                h2{
+                    font-size: 6vw;
+                }
+    
+                p{
+                    font-size: 3vw;
+                }
+            }
+        }
+    
+        // Membresia premium 
+    
+        .clmain__premium{
+            margin-top: 5vh;
+            display: grid;
+            grid-template-rows: 0.5fr 2fr;
+            grid-template-columns: 1fr;
+    
+            .clmain__premium--imagen{
+                @include medidas-img(auto,77vw);
+            }
+    
+            .clmain__premium--texto{
+    
+                h2{
+                    font-size: 6vw;
+                }
+    
+                p{
+                    font-size: 3vw;
+                }
+            }
+        }
+    
+        // Tabla comparativa precios 
+    
+        .clmain__tabla {
+    
+            .clmain__tabla--head {
+                font-size: 5vw;
+            }
+    
+            tr{
+    
+                td{
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Query para celulares y tablets pequeñas */
+
+@media screen and (max-width:650px) {
+
+    /* Estilos para pagina CLUB VALLE DE LERMA /*
+    /* Estilos para el main */  
+    
+    .clmain{
+    
+        .clmain__subtitulo{
+            font-size: 9vw;
+        }
+    
+        // Membresia estandar
+    
+        .clmain__estandar{
+            margin-top: 2vh;
+    
+            .clmain__estandar--imagen{
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+                order: 1;
+            }
+    
+            .clmain__estandar--texto{
+    
+                h2{
+                    font-size: 7.5vw;
+                }
+    
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    
+        // Membresia premium 
+    
+        .clmain__premium{
+            margin-top: 2vh;
+    
+            .clmain__premium--imagen{
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+            }
+    
+            .clmain__premium--texto{
+    
+                h2{
+                    font-size: 7.5vw;
+                }
+    
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    
+        // Tabla comparativa precios 
+    
+        .clmain__tabla {
+    
+            .clmain__tabla--head {
+                font-size: 6vw;
+            }
+    
+            tr{
+    
+                td{
+                    font-size: 5vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+/* Estilos para el main */
+
+.comain {
+    @include flex-column-center;
+    background-color: black;
+    border-bottom: $border-marca;
+
+    .comain__subtitulo {
+        padding: 2vh;
+        color: white;
+        font-family: brewery;
+        font-size: 5.5vw;
+    }
+
+    .comain__form {
+        @include flex-column-evenly-center;
+        height: 65vh;
+        color: white;
+
+        .comain__form--div {
+            @include flex-column;
+            row-gap: 0.7vh;
+
+            label{
+                color: white;
+                font-family: brewery;
+                font-size: 2vw;
+            }
+
+            .comain__form--input {
+                @include medidas-img(23.5vw,3vh);
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1vw;
+                font-weight: 700;
+                padding: 5px;
+            }
+
+            .comain__form--com {
+                @include medidas-img(23.5vw,10vh);
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1vw;
+                font-weight: 700;
+                padding: 5px;
+            }
+        }
+
+        .comain__form--botones{
+
+            .comain__form--enviar{
+                display: inline-block;
+                border-radius: 3px;
+                padding: 10px;
+                font-family: brewery;
+                font-size: 1vw;
+                background-color: white;
+
+                 &:hover{
+                    box-shadow: 1px 1px 5px white;
+                 }
+            }
+
+            .comain__form--rest {
+                display: inline-block;
+                border-radius: 3px;
+                padding: 10px;
+                font-family: brewery;
+                font-size: 1vw;
+                background-color: white;
+
+                &:hover{
+                    box-shadow: 1px 1px 5px white;
+                 }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Query para tablets verticales */
+
+@media screen and (max-width:1024px) {
+
+    /* ESTILOS PARA PAGINA CONTACTO */
+    /* Estilos para el main */
+
+    .comain {
+    
+        .comain__subtitulo {
+            font-size: 7vw;
+        }
+    
+        .comain__form {
+    
+            .comain__form--div {
+    
+                label{
+                    font-size: 4.5vw;
+                }
+    
+                .comain__form--input {
+                    @include medidas-img(55vw,3vh);
+                    font-size: 3vw;
+                }
+    
+                .comain__form--com {
+                    @include medidas-img(55vw,10vh);
+                    font-size: 3vw;
+                }
+            }
+    
+            .comain__form--botones{
+    
+                .comain__form--enviar{
+                    display: inline-block;
+                    font-size: 3vw;
+                }
+    
+                .comain__form--rest {
+                    display: inline-block;
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Query para celulares y tablets pequeñas */
+
+@media screen and (max-width:650px) {
+
+    /* ESTILOS PARA PAGINA CONTACTO */
+    /* Estilos para el main */
+
+    .comain {
+    
+        .comain__subtitulo {
+            font-size: 9vw;
+        }
+    
+        .comain__form {
+    
+            .comain__form--div {
+    
+                label{
+                    font-size: 6vw;
+                }
+    
+                .comain__form--input {
+                    @include medidas-img(55vw,3vh);
+                    font-size: 4.5vw;
+                }
+    
+                .comain__form--com {
+                    @include medidas-img(55vw,10vh);
+                    font-size: 4.5vw;
+                }
+            }
+    
+            .comain__form--botones{
+    
+                .comain__form--enviar{
+                    display: inline-block;
+                    font-size: 4.5vw;
+                }
+    
+                .comain__form--rest {
+                    display: inline-block;
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    }
+}

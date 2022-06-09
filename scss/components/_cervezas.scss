@@ -1,0 +1,498 @@
+/* Estilos para el main */
+
+.cmain {
+    @include flex-column-center;
+    row-gap: 2.5vh;
+    background-color: black;
+    border-bottom: $border-marca;
+
+    .cmain__imagen {
+        @include medidas-img(100vw,auto);
+    }
+
+    .cmain__subtitulo {
+        color: white;
+        font-family: brewery;
+        font-size: 5.2vw;
+    }
+
+    // Estilos para cerveza kolsch
+
+    .cmain__kolsch {
+        margin-top: 2vh;
+        margin-left: 1vw;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        .cmain__kolsch--imagen {
+            @include medidas-img(28rem,48rem);
+            border-radius: 12%;
+        }
+
+        .cmain__kolsch--descripcion {
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            ul{
+                margin-top: 1vw;
+
+                li{
+                    list-style-type: none;
+                    color: white;
+                    font-family: caredrock;
+                    font-size: 3.7vw;
+                }
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    // Estilos para cerveza trigo
+
+    .cmain__trigo {
+        margin-left: 1vw;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        .cmain__trigo--imagen {
+            @include medidas-img(28rem,48rem);
+            border-radius: 12%;
+        }
+
+        .cmain__trigo--descripcion {
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            ul{
+                margin-top: 1vw;
+
+                li{
+                    list-style-type: none;
+                    color: white;
+                    font-family: caredrock;
+                    font-size: 3.7vw;
+                }
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    // Estilos para cerveza irish 
+
+    .cmain__irish {
+        margin-left: 1vw;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        .cmain__irish--imagen {
+            @include medidas-img(28rem,48rem);
+            border-radius: 12%;
+        }
+
+        .cmain__irish--descripcion {
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            ul{
+                margin-top: 1vw;
+
+                li{
+                    list-style-type: none;
+                    color: white;
+                    font-family: caredrock;
+                    font-size: 3.7vw;
+                }
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    // Estilos para cerveza porter 
+
+    .cmain__porter {
+        margin-bottom: 2vh;
+        margin-left: 1vw;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        .cmain__porter--imagen {
+            @include medidas-img(28rem,48rem);
+            border-radius: 12%;
+        }
+
+        .cmain__porter--descripcion {
+            align-self: flex-start;
+            margin: 0 2vw;
+            @include flex-column;
+
+            h2{
+                color: white;
+                font-family: brewery;
+                font-size: 4.5vw;
+                align-self: center;
+            }
+
+            ul{
+                margin-top: 1vw;
+
+                li{
+                    list-style-type: none;
+                    color: white;
+                    font-family: caredrock;
+                    font-size: 3.7vw;
+                }
+            }
+
+            p{
+                margin: 20px 0;
+                color: white;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                font-size: 1.8vw;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Query para tablets verticales */
+
+@media screen and (max-width:1024px) {
+
+    /* Estilos para pagina CERVEZAS /*
+    /* Estilos para el main */
+
+
+    .cmain {
+
+        .cmain__subtitulo {
+            font-size: 7vw;
+        }
+
+        // Estilos para cerveza kolsch 
+
+        .cmain__kolsch {
+            grid-template-columns: 1fr;
+            grid-template-areas:    "descp"
+                                    "imagen"
+                                    "imagen";
+            justify-items: center;
+            align-items: center;
+
+            .cmain__kolsch--descripcion {
+                grid-area: descp;
+
+                h2{
+                    font-size: 6vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 5vw;
+                    }
+                }
+
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+            .cmain__kolsch--imagen {
+                grid-area: imagen;
+                @include medidas-img(45vw,77vw);
+            }
+        }
+
+        // Estilos para cerveza trigo 
+
+        .cmain__trigo {
+            margin-top: 3vh;
+            grid-template-columns: 1fr;
+            grid-template-areas:    "descp"
+                                    "imagen"
+                                    "imagen";
+            justify-items: center;
+            align-items: center;
+
+            .cmain__trigo--descripcion {
+                grid-area: descp;
+
+                h2{
+                    font-size: 6vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 5vw;
+                    }
+                }
+
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+            .cmain__trigo--imagen {
+                grid-area: imagen;
+                @include medidas-img(45vw,77vw);
+            }
+        }
+
+        // Estilos para cerveza irish 
+
+        .cmain__irish {
+            margin-top: 3vh;
+            grid-template-columns: 1fr;
+            grid-template-areas:    "descp"
+                                    "imagen"
+                                    "imagen";
+            justify-items: center;
+            align-items: center;
+
+            .cmain__irish--descripcion {
+                grid-area: descp;
+
+                h2{
+                    font-size: 6vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 5vw;
+                    }
+                }
+
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+            .cmain__irish--imagen {
+                grid-area: imagen;
+                @include medidas-img(45vw,77vw);
+            }
+        }
+
+        // Estilos para cerveza porter 
+
+        .cmain__porter {
+            margin-top: 3vh;
+            grid-template-columns: 1fr;
+            grid-template-areas:    "descp"
+                                    "imagen"
+                                    "imagen";
+            justify-items: center;
+            align-items: center;
+
+            .cmain__porter--descripcion {
+                grid-area: descp;
+
+                h2{
+                    font-size: 6vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 5vw;
+                    }
+                }
+
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+            .cmain__porter--imagen {
+                grid-area: imagen;
+                @include medidas-img(45vw,77vw);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Query para celulares y tablets pequeñas */
+
+@media screen and (max-width:650px) {
+
+    /* Estilos para pagina CERVEZAS /*
+    /* Estilos para el main */
+
+    .cmain {
+
+        .cmain__subtitulo {
+            font-size: 9vw;
+        }
+
+        // Estilos para cerveza kolsch 
+
+        .cmain__kolsch {
+            margin-left: 0;
+
+            .cmain__kolsch--descripcion {
+
+                h2{
+                    font-size: 7.5vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 7vw;
+                    }
+                }
+
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+
+            .cmain__kolsch--imagen {
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+            }
+        }
+
+        // Estilos para cerveza trigo 
+
+        .cmain__trigo {
+            margin-left: 0;
+
+            .cmain__trigo--descripcion {
+
+                h2{
+                    font-size: 7.5vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 7vw;
+                    }
+                }
+
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+
+            .cmain__trigo--imagen {
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+            }
+        }
+
+        // Estilos para cerveza irish 
+
+        .cmain__irish {
+            margin-left: 0;
+
+            .cmain__irish--descripcion {
+
+                h2{
+                    font-size: 7.5vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 7vw;
+                    }
+                }
+
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+
+            .cmain__irish--imagen {
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+            }
+        }
+
+        // Estilos para cerveza porter 
+
+        .cmain__porter {
+            margin-left: 0;
+
+            .cmain__porter--descripcion {
+
+                h2{
+                    font-size: 7.5vw;
+                }
+
+                ul{
+
+                    li{
+                        font-size: 7vw;
+                    }
+                }
+
+                p{
+                    font-size: 4.5vw;
+                }
+            }
+
+            .cmain__porter--imagen {
+                @include medidas-img(100vw,auto);
+                border-radius: 0;
+            }
+        }
+    }
+}

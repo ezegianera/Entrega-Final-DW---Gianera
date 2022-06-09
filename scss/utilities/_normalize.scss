@@ -1,0 +1,39 @@
+/* Reseteo de estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+/* Corrección de estilos de BOOTSTRAP */
+/* Arreglo de listas */
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Arreglo de subtitulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* Arreglo de spans */
+
+span{
+    font-weight: bolder;
+    text-decoration: underline bottom;
+}
