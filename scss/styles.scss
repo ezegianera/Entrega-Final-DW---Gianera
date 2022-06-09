@@ -660,6 +660,10 @@ body {
                             margin: 0;
                             padding: 2vw;
                         }
+
+                        &:hover {
+                            border-bottom: none;
+                        }
                     }
 
                     .aMedio {

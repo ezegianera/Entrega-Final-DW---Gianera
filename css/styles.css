@@ -387,6 +387,8 @@ body {
               font-size: 8vw;
               margin: 0;
               padding: 2vw; }
+            header nav ul li a:hover {
+              border-bottom: none; }
           header nav ul li .aMedio {
             margin: 0 1.25vw; }
           header nav ul li .aHome {
