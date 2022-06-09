@@ -87,11 +87,37 @@
 
     <main class="imain">
 
-        <!-- Imagen principal de la pagina-->
+        <!-- Imagenes principales de la pagina-->
+
+        <div id="carrusel" class="carousel slide imain__figure" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="img/vdl.jpg" class="d-block w-100 imain__figure--img" alt="Cerveza Valle de Lerma - Imagen presentación institucional">
+              </div>
+              <div class="carousel-item">
+                <img src="img/club.jpg" class="d-block w-100 imain__figure--img" alt="Club valle de lerma">
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+          </div>
+
+          <!--
         <figure class="imain__figure">
             <img src="img/vdl.jpg" alt="Cerveza Valle de Lerma - Imagen presentación institucional" class="imain__figure--foto1">
         </figure>
-
+-->
         <!-- Sub-bloque de descripción y presentación-->
         <section class="imain__presentacion">
 
